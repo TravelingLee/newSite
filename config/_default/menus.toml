@@ -1,0 +1,26 @@
+[[main]]
+name = "博客"
+pre = "blogger"
+pageRef = "posts"
+identifier = "XxUCsHlmv6"
+url = "/posts"
+weight = 10
+  [main.params]
+    dropdown = true
+
+[[main]]
+name = "教程"
+pre = "lightbulb"
+url = "/tutorial"
+pageRef = "tutorial"
+identifier = "vCZIl3jghM"
+weight = 20
+
+[[footer]]
+name = "查看分类"
+pageRef = "/categories"
+weight = 10
+
+[[params]]
+  [params.header]
+  displayLangSwitcher = false

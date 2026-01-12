@@ -1,0 +1,81 @@
+colorScheme = "forest"
+defaultAppearance = "light"
+autoSwitchAppearance = true
+enableSearch = true
+enableCodeCopy = true
+mainSections = [ "tutorial" ]
+firebase = { }
+fathomAnalytics = { }
+verification = { }
+highlightCurrentMenuArea = true
+smartTOC = true
+defaultBackgroundImage = "img/background.png"
+
+[header]
+layout = "background"
+
+[footer]
+showCopyright = true
+showThemeAttribution = true
+showAppearanceSwitcher = true
+showScrollToTop = true
+
+[homepage]
+layout = "background"
+showRecent = true
+showRecentItems = 5
+showMoreLink = true
+showMoreLinkDest = "/tutorial"
+showTaxonomies = true
+cardView = false
+cardViewScreenWidth = false
+layoutBackgroundBlur = false
+
+[article]
+showNextPrev = true
+showDate = true
+showDateUpdated = false
+showAuthor = true
+showHero = false
+heroStyle = "basic"
+showBreadcrumbs = true
+showDraftLabel = true
+showEdit = false
+editAppendPath = true
+seriesOpened = false
+showHeadingAnchors = true
+showPagination = true
+invertPagination = true
+showReadingTime = true
+showTableOfContents = true
+showTaxonomies = true
+showAuthorsBadges = false
+showWordCount = true
+showSummary = true
+
+[list]
+showBreadcrumbs = false
+showSummary = true
+showTableOfContents = false
+showCards = false
+groupByYear = true
+cardView = false
+cardViewScreenWidth = false
+constrainItemsWidth = true
+
+[sitemap]
+excludedKinds = [ ]
+
+[taxonomy]
+showTermCount = true
+
+[params]
+displayLangSwitcher = false
+
+[comments]
+    provider = "disqus"
+    disqusShortname = "limou-blog"
+
+[author]
+    name = "limou"
+    image = "img/avatar.jpg"

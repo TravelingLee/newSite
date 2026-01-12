@@ -1,0 +1,21 @@
+{{ if eq site.Params.comments.provider "disqus" }}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/disqusjs@3.0/dist/browser/styles/disqusjs.css">
+<div id="disqusjs"></div>
+<script src="https://cdn.jsdelivr.net/npm/disqusjs@3.0/dist/browser/disqusjs.es2015.umd.min.js"></script>
+<script>
+    const disqusjs = new DisqusJS({
+        shortname: 'limou-blog',
+        siteName: 'limou-blog',
+        identifier: '',
+        url: 'https://disqus.com/api/oauth/2.0/authorize/',
+        title: '',
+        api: '',
+        apikey: 'i0GZcdgLjzy4VGbWiuLcTD0chKelIs0qetwC3srWYk2RXdHme4y1w4cRmLhRDmBi',
+        admin: '',
+        adminLabel: ''
+    });
+    disqusjs.render(document.getElementById('disqusjs'));
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+{{ end }}
