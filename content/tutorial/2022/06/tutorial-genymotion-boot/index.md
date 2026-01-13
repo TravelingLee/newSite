@@ -3,7 +3,7 @@ title: "解决genymotion虚拟机无法启动的问题"
 categories: ["Android开发", "虚拟机"]
 #externalUrl: ""
 showSummary: true
-summary: "使用前端数据可视化库，结合建站系统的API实现网站统计图，zblog插件商城卖的价格可不便宜，不如自己做"
+summary: "解决genymotion虚拟机无法启动的问题"
 date: 2022-06-25
 draft: false
 ---
