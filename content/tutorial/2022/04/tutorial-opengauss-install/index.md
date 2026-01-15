@@ -1,12 +1,16 @@
 ---
 title: "CentOS安装openGauss踩坑及填坑教程"
-categories: ["CentOS", "OpenGauss", "数据库"]
+tags: ["CentOS", "OpenGauss", "数据库"]
+categories: ["数据库"]
 #externalUrl: ""
 showSummary: true
 summary: "openGauss的社区还非常地渺小，所以即使是我这一篇不起眼的文章，也许都能帮到不少人，所以决定记录下来。"
 date: 2022-04-04
 draft: false
 ---
+[网站迁移，排版错乱敬请原谅]
+
+<br>
 
 一开始，我以为安装openGauss也就跟手动安装MySQL差不多，但是当我开始动手没多久我就知道我要踩很多坑了，openGauss的社区还非常地渺小，所以即使是我这一篇不起眼的文章，也许都能帮到不少人，所以决定记录下来。
 
@@ -27,13 +31,13 @@ draft: false
 安装包从官网下载即可：[软件包 | openGauss 2.1.0](https://opengauss.obs.cn-south-1.myhuaweicloud.com/2.1.0/x86/openGauss-2.1.0-CentOS-64bit-all.tar.gz)
 
 1. ### （1）下载到当前文件夹：
-```
-  <pre class="prism-highlight prism-language-bash">wget [下载链接]
+```bash
+  wget [下载链接]
 ```
 2. ### （2）解压到当前文件夹：
+```bash
+  tar -zxvf fileName（扩展名也要带上）
 ```
-  <pre class="prism-highlight prism-language-bash">tar -zxvf fileName（扩展名也要带上）
-  ```
 
 解压之后会得到更多的压缩文件：
 
@@ -47,8 +51,8 @@ draft: false
 ### 编写clusterconfig.xml文件，这一步按部就班即可。
 
 1. \### （5）执行集群配置脚本
-```
-  <pre class="prism-highlight prism-language-bash">python gs_preinstall -U omm -G dbgrp -X  /opt/software/openGauss/clusterconfig.xml
+```bash
+python gs_preinstall -U omm -G dbgrp -X  /opt/software/openGauss/clusterconfig.xml
   ```
 
 然后前方高能了，开始出现各种错误了。
@@ -59,31 +63,31 @@ draft: false
   ------
 2. ### （1）我遇到的第一个问题是系统版本问题，因为我电脑上的虚拟机是很久之前就已经安装了的，是CentOS7.9，在openGauss安装完毕之后显示不支持这个系统版本，需要降级到CentOS7.6。这里注意，不是跨大版本降级，只需要使用rpm包即可。
 3. #### 1）获取降级包：
-```
-  <pre class="prism-highlight prism-language-bash">wget https://www.repo.cloudlinux.com/cloudlinux/migrate/release-files/centos/7/x86<em>64/centos-release-7-6.1810.2.el7.centos.x86</em>64.rpm
+```bash
+  wget https://www.repo.cloudlinux.com/cloudlinux/migrate/release-files/centos/7/x86<em>64/centos-release-7-6.1810.2.el7.centos.x86</em>64.rpm
   ```
 4. #### 2）强制安装：
-```
-  <pre class="prism-highlight prism-language-bash">rpm -ivh centos-release-7-6.1810.2.el7.centos.x86_64.rpm --force --nodeps
+```bash
+  rpm -ivh centos-release-7-6.1810.2.el7.centos.x86_64.rpm --force --nodeps
   ```
 
 **<span style="color: #FF0000;">注意：force是灵魂，没有force会安装不上，因为会与原版本冲突。</span>**
 
 1. #### 3）查看release：
-```
-  <pre class="prism-highlight prism-language-bash">rpm -qa |grep -i centos-release
+```bash
+  rpm -qa |grep -i centos-release
   ```
 2. #### 4）移除较新版本的release，降级成功
-```
-  <pre class="prism-highlight prism-language-bash">rpm -ev ******（就是上面查出来那个新版的信息）
+```bash
+  rpm -ev ******（就是上面查出来那个新版的信息）
   ```
 3. ### （2）第二个问题是python不可用，具体就是执行脚本的时候显示python：command not found（未找到命令）。原因可能有两个，第一就是系统找不到python在哪儿，第二就是没安装python。
 
 没安装python的可能性很小，CentOS是自带python的，除非你自己闲着没事去删了，那只能重装了（下面会说）。如果是系统找不到，那你就先自己找到，然后建立软连接就可以了。
 
 1. \#### 1）找到python安装目录：
-```
-  <pre class="prism-highlight prism-language-bash">whereis python
+```bash
+  whereis python
   ```
 
 注意：像这种文件夹才是正儿八经的python目录，单个文件的不是，因为python的安装包原本就是个压缩包，解压出来就是个文件夹。
@@ -94,8 +98,8 @@ draft: false
 
 在想查看的目录下执行以下命令：
 
-```
-<pre class="prism-highlight prism-language-bash">ls -l
+```bash
+ls -l
 ```
 
 显示的结果中，最左边一列的第一个字母是d就是文件夹（directory）
@@ -105,16 +109,16 @@ draft: false
 ![image.png](../img/202204041649077445841873.png)
 
 1. #### 2）创建软连接：
-```
-  <pre class="prism-highlight prism-language-bash">ln -s 所查到的python目录 /usr/bin/python
+```bash
+  ln -s 所查到的python目录 /usr/bin/python
   ```
   
-  ```
-  <pre class="prism-highlight prism-language-bash">好像 ln -s 所查到的python目录 /usr/bin 也可以
+  ```bash
+  好像 ln -s 所查到的python目录 /usr/bin 也可以
   ```
 2. #### 3）检查是否成功：
-```
-  <pre class="prism-highlight prism-language-bash">python -V（V是大写的）
+```bash
+  python -V（V是大写的）
   ```
 
 显示python版本号说明成功了。
@@ -131,32 +135,32 @@ draft: false
   <pre class="prism-highlight prism-language-bash">yum install openssl-devel bzip2-devel expat-devel gdbm-devel readline-devel sqlite-devel
   ```
 2. #### 2）获取python安装包：
-```
-  <pre class="prism-highlight prism-language-bash">wget https://www.python.org/ftp/python/3.6.8/Python-3.6.8.tar.xz
+```bash
+  wget https://www.python.org/ftp/python/3.6.8/Python-3.6.8.tar.xz
   ```
 3. #### 3）解压：
-```
-  <pre class="prism-highlight prism-language-bash">tar -zxvf Python-3.6.8.tar.xz
+```bash
+  tar -zxvf Python-3.6.8.tar.xz
   ```
 4. #### 4）创建编译安装文件夹：
-```
-  <pre class="prism-highlight prism-language-bash">mkdir 你想安装的路径和文件夹名称
+```bash
+mkdir 你想安装的路径和文件夹名称
   ```
 5. #### 5）进入解压出来的python文件夹：
-```
-  <pre class="prism-highlight prism-language-bash">cd Python-3.6.8所在的目录
+```bash
+cd Python-3.6.8所在的目录
   ```
 6. #### 6）依赖检查、指定安装目录：
-```
-  <pre class="prism-highlight prism-language-bash">./configure --prefix="第四步中创建的编译安装文件夹的绝对路径"
+```bash
+./configure --prefix="第四步中创建的编译安装文件夹的绝对路径"
   ```
 7. #### 7）开始编译安装：
-```
-  <pre class="prism-highlight prism-language-bash">make && make install
+```bash
+make && make install
   ```
 8. #### 8）创建软连接：（参见第二个问题）
-```
-  <pre class="prism-highlight prism-language-bash">ln -s python目录 /usr/bin/python3
+```bash
+ln -s python目录 /usr/bin/python3
   ```
 
 注意：是/usr/bin/<span style="color: #FF0000;">python3。</span>
@@ -165,15 +169,15 @@ draft: false
 
 <span style="color: #FF0000;"><span style="color: #000000;">原因是yum依赖于python2，把yum的python版本换成Python2就行。</span></span>
 
-```
-<pre class="prism-highlight prism-language-bash">vim /usr/bin/yum
+```bash
+vim /usr/bin/yum
 ```
 
 按i输入，把第一行最后面的python改成python2.7（或原先的python2.x），按ESC结束编辑，输入<span style="color: #FF0000;">: w q三个<span style="color: #000000;">字符、回车退出vim编辑器。</span></span><span style="color: #FF0000;"><span style="color: #000000;"></span></span>
 
 1. ### <span style="color: #FF0000;"><span style="color: #000000;">（5）python3安装不成功，第四个问题中第（6）步执行</span></span>
-```
-  <pre class="prism-highlight prism-language-bash">./configure --prefix="第四步中创建的编译安装文件夹的绝对路径"
+```bash
+./configure --prefix="第四步中创建的编译安装文件夹的绝对路径"
   ```
 2. ### <span style="color: #FF0000;"><span style="color: #000000;"></span></span>的时候出现依赖检查失败。
 
@@ -188,8 +192,8 @@ draft: false
 
 这是GMP安装出错，但我也没找出具体原因，我过了一段时间又去Google了一下解决办法，然后用一位CSDN哥们给的命令成功安装了。[CentOS 7安装gcc,并编辑运行第一个c/c++程序（含vi编辑器的简单使用）](https://blog.csdn.net/qq_40238526/article/details/94039168)
 
-```
-<pre class="prism-highlight prism-language-bash">yum -y install gcc gcc-c++ kernel-devel
+```bash
+yum -y install gcc gcc-c++ kernel-devel
 ```
 
 我不知道是不是不同命令导致的，我就把我成功的命令放这儿吧。
@@ -214,8 +218,8 @@ draft: false
 
 <span style="color: #000000;"></span>
 
-```
-<pre class="prism-highlight prism-language-bash">ln -s gs_开头的文件的路径 /usr/bin
+```bash
+ln -s gs_开头的文件的路径 /usr/bin
 ```
 
 <span style="color: #000000;"></span><span style="color: #FF0000;">非root用户（omm）下无法访问/usr/bin，所以不能设置软连接</span>，但是在该用户下执行的gs*相关的bash并不多，直接cd到gs*命令所在的目录去执行gs\_命令即可。
@@ -232,14 +236,14 @@ draft: false
 
 <span style="font-family: 微软雅黑, Arial, Narrow, Helvetica, sans-serif; color: #000000;">我没有想太多，它嫌太多参数我就直接把它（<span font-size:="" microsoft="" style="color: #000000; font-family: 微软雅黑, " yahei="">-- encoding=UTF8</span></span><span style="font-family: 微软雅黑, Arial, Narrow, Helvetica, sans-serif;">）删了，所以上面绿色的命令就变成了：</span>
 
-```
-<pre class="prism-highlight prism-language-bash">gs_install -X  /opt/software/openGauss/clusterconfig.xml --gsinit-parameter="" --dn-guc="max_process_memory=4GB" --dnguc="shared_buffers=128MB" --dn-guc="bulk_write_ring_size=128MB" -- dn-guc="cstore_buffers=16MB"
+```bash
+gs_install -X  /opt/software/openGauss/clusterconfig.xml --gsinit-parameter="" --dn-guc="max_process_memory=4GB" --dnguc="shared_buffers=128MB" --dn-guc="bulk_write_ring_size=128MB" -- dn-guc="cstore_buffers=16MB"
 ```
 
 1. <span style="color: #FF0000; font-family: 微软雅黑, Arial, Narrow, Helvetica, sans-serif;"><span style="font-family: 微软雅黑, Arial, Narrow, Helvetica, sans-serif; color: #000000;"></span></span>我到这里就可以安装成功了。
 2. ### （10）可能有的同学在连接数据库的时候，也就是执行以下命令的时候出错：
-```
-  <pre class="prism-highlight prism-language-bash">gsql -d postgres -p 26000 -r
+```bash
+gsql -d postgres -p 26000 -r
   ```
 
 可能是26000端口没有打开，可以自行百度如何打开端口。不过这个问题如果按照指导书安装的话应该不会有，因为指导书是关闭防火墙，直接全开放了。不过在实际开发中这显然属于花式作死......

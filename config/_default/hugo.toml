@@ -5,6 +5,10 @@ theme = "blowfish"
 # baseURL = "https://your_domain.com/"
 defaultContentLanguage = "zh-cn"
 languageCode = 'zh-cn'
+title = "Limou's Site"
+bio = "无法安逸，就让不安多点意义"
+favicon = "favicon.svg"
+hasCJKLanguage = true
 
 enableRobotsTXT = true
 summaryLength = 3

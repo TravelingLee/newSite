@@ -1,6 +1,7 @@
 ---
 title: "个人网站接入CDN"
-categories: ["CDN", "云服务", "建站"]
+tags: ["CDN", "云服务", "建站"]
+categories: ["云服务"]
 #externalUrl: ""
 showSummary: true
 summary: "最近给我的个人网站开通了CDN服务，折腾了好久才算是“可以用了”，虽然还有一些小小的问题，但好在不是那么地影响使用。"

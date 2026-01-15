@@ -1,6 +1,7 @@
 ---
 title: "博客园底部添加音乐播放器"
-categories: ["建站", "前端"]
+tags: ["建站", "前端"]
+categories: ["前端"]
 #externalUrl: ""
 showSummary: true
 summary: "根据目前（2022-05-12）最新的APlayer和MetingJS进行编写的，示例来自MetingJS的GitHub项目"

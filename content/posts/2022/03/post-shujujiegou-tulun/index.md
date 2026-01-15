@@ -1,7 +1,8 @@
 ---
 title: "数据结构-图论"
 summary: "数据结构图论章节的一些总结"
-categories: ["数据结构","图论",]
+tags: ["数据结构","图论",]
+categories: ["数据结构与算法"]
 #externalUrl: ""
 #showSummary: true
 date: 2022-03-18

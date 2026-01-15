@@ -3,20 +3,14 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>//localhost:1313/categories/android%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2022-06-25T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>//localhost:1313/categories/</loc>
-    <lastmod>2022-06-25T00:00:00+00:00</lastmod>
+    <lastmod>2026-01-06T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
-      hreflang="params"
-      href="//localhost:1313/params/categories/"
+      hreflang="en"
+      href="//localhost:1313/en/categories/"
     />
     <xhtml:link
       rel="alternate"
@@ -26,13 +20,13 @@
   </url>
   <url>
     <loc>//localhost:1313/</loc>
-    <lastmod>2022-06-25T00:00:00+00:00</lastmod>
+    <lastmod>2026-01-06T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
-      hreflang="params"
-      href="//localhost:1313/params/"
+      hreflang="en"
+      href="//localhost:1313/en/"
     />
     <xhtml:link
       rel="alternate"
@@ -41,7 +35,53 @@
     />
   </url>
   <url>
+    <loc>//localhost:1313/tags/</loc>
+    <lastmod>2026-01-06T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="//localhost:1313/en/tags/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="zh-cn"
+      href="//localhost:1313/tags/"
+    />
+  </url>
+  <url>
     <loc>//localhost:1313/tutorial/</loc>
+    <lastmod>2026-01-06T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>//localhost:1313/categories/%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2026-01-06T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>//localhost:1313/tags/%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2026-01-06T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>//localhost:1313/tutorial/2026/01/post-shield-script/</loc>
+    <lastmod>2026-01-06T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>//localhost:1313/categories/android%E5%BC%80%E5%8F%91/</loc>
+    <lastmod>2022-06-25T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>//localhost:1313/tags/android%E5%BC%80%E5%8F%91/</loc>
     <lastmod>2022-06-25T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -53,7 +93,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>//localhost:1313/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/</loc>
+    <loc>//localhost:1313/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/</loc>
     <lastmod>2022-06-25T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -65,13 +105,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>//localhost:1313/categories/%E5%BB%BA%E7%AB%99/</loc>
-    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>//localhost:1313/categories/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>//localhost:1313/tags/%E5%BB%BA%E7%AB%99/</loc>
     <lastmod>2022-05-12T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -83,7 +117,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>//localhost:1313/categories/cdn/</loc>
+    <loc>//localhost:1313/tags/cdn/</loc>
     <lastmod>2022-04-27T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -101,7 +135,13 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>//localhost:1313/categories/centos/</loc>
+    <loc>//localhost:1313/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1/</loc>
+    <lastmod>2022-04-27T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>//localhost:1313/tags/centos/</loc>
     <lastmod>2022-04-04T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -113,7 +153,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>//localhost:1313/categories/opengauss/</loc>
+    <loc>//localhost:1313/tags/opengauss/</loc>
     <lastmod>2022-04-04T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -125,7 +165,13 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>//localhost:1313/categories/github/</loc>
+    <loc>//localhost:1313/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <lastmod>2022-04-04T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>//localhost:1313/tags/github/</loc>
     <lastmod>2022-03-28T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -137,13 +183,25 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>//localhost:1313/categories/%E5%85%B6%E5%AE%83/</loc>
+    <lastmod>2022-03-28T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>//localhost:1313/posts/</loc>
     <lastmod>2022-03-18T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>//localhost:1313/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <loc>//localhost:1313/about/</loc>
+    <lastmod>2022-03-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>//localhost:1313/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2022-03-18T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -155,7 +213,13 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>//localhost:1313/categories/%E5%9B%BE%E8%AE%BA/</loc>
+    <loc>//localhost:1313/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2022-03-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>//localhost:1313/tags/%E5%9B%BE%E8%AE%BA/</loc>
     <lastmod>2022-03-18T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -166,8 +230,8 @@
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
-      hreflang="params"
-      href="//localhost:1313/params/authors/"
+      hreflang="en"
+      href="//localhost:1313/en/authors/"
     />
     <xhtml:link
       rel="alternate"
@@ -181,28 +245,13 @@
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
-      hreflang="params"
-      href="//localhost:1313/params/series/"
+      hreflang="en"
+      href="//localhost:1313/en/series/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="zh-cn"
       href="//localhost:1313/series/"
-    />
-  </url>
-  <url>
-    <loc>//localhost:1313/tags/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="params"
-      href="//localhost:1313/params/tags/"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="zh-cn"
-      href="//localhost:1313/tags/"
     />
   </url>
 </urlset>

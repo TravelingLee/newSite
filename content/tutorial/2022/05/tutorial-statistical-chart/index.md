@@ -1,6 +1,7 @@
 ---
 title: "给zblog网站做个统计图"
-categories: ["建站", "前端"]
+tags: ["建站", "前端"]
+categories: ["前端"]
 #externalUrl: ""
 showSummary: true
 summary: "使用前端数据可视化库，结合建站系统的API实现网站统计图，zblog插件商城卖的价格可不便宜，不如自己做"

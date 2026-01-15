@@ -16,10 +16,34 @@ pageRef = "tutorial"
 identifier = "vCZIl3jghM"
 weight = 20
 
+[[main]]
+name = ">"
+weight = 30
+
+[[main]]
+name = "文章分类"
+parent = ">"
+url = "/categories"
+
+[[main]]
+name = "文章标签"
+parent = ">"
+url = "/tags"
+
+[[main]]
+name = "关于"
+parent = ">"
+url = "/about"
+
 [[footer]]
-name = "查看分类"
-pageRef = "/categories"
+name = "文章标签"
+pageRef = "/tags"
 weight = 10
+
+[[footer]]
+name = "文章分类"
+pageRef = "/categories"
+weight = 20
 
 [[params]]
   [params.header]

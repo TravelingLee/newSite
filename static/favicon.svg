@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- 蓝色背景，带圆角 -->
+  <rect width="512" height="512" fill="#1F9EEA" rx="80"/>
+  
+  <!-- 显著加粗的L字母 -->
+  <path d="M140 140 L140 380 L380 380" 
+        fill="none" stroke="#FFFFFF" stroke-width="48" 
+        stroke-linecap="round"/>
+  
+  <!-- 显著加粗的代码符号 -->
+  <path d="M230 200 L190 240 L230 280 M320 200 L360 240 L320 280" 
+        fill="none" stroke="#FFFFFF" stroke-width="28" 
+        stroke-linecap="round"/>
+</svg>

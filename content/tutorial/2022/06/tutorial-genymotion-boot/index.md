@@ -1,6 +1,7 @@
 ---
 title: "解决genymotion虚拟机无法启动的问题"
-categories: ["Android开发", "虚拟机"]
+tags: ["Android开发", "虚拟机"]
+categories: ["Android开发"]
 #externalUrl: ""
 showSummary: true
 summary: "解决genymotion虚拟机无法启动的问题"

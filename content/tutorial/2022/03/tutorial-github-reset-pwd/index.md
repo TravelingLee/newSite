@@ -1,6 +1,7 @@
 ---
 title: "GitHub重置密码出现Unable to verify your captcha response解决办法"
-categories: ["GitHub"]
+tags: ["GitHub"]
+categories: ["其它"]
 #externalUrl: ""
 #showSummary: true
 date: 2022-03-28

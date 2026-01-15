@@ -1,15 +1,18 @@
-colorScheme = "forest"
+colorScheme = "one-light"
 defaultAppearance = "light"
 autoSwitchAppearance = true
 enableSearch = true
 enableCodeCopy = true
-mainSections = [ "tutorial" ]
+mainSections = [ "tutorial", "posts" ]
 firebase = { }
 fathomAnalytics = { }
 verification = { }
 highlightCurrentMenuArea = true
-smartTOC = true
 defaultBackgroundImage = "img/background.png"
+smartTOC = true
+logo = "img/logo-64x64.png"
+title = "Limou's Site"
+dateFormat = "2006年01月02日"
 
 [header]
 layout = "background"
@@ -23,21 +26,22 @@ showScrollToTop = true
 [homepage]
 layout = "background"
 showRecent = true
-showRecentItems = 5
+showRecentItems = 6
 showMoreLink = true
 showMoreLinkDest = "/tutorial"
 showTaxonomies = true
-cardView = false
+cardView = true
 cardViewScreenWidth = false
-layoutBackgroundBlur = false
+layoutBackgroundBlur = true
+homepageImage = "img/background.png"
 
 [article]
 showNextPrev = true
 showDate = true
 showDateUpdated = false
 showAuthor = true
-showHero = false
-heroStyle = "basic"
+showHero = true
+heroStyle = "background"
 showBreadcrumbs = true
 showDraftLabel = true
 showEdit = false
@@ -58,6 +62,8 @@ showBreadcrumbs = false
 showSummary = true
 showTableOfContents = false
 showCards = false
+showHero = true
+heroStyle = "background"
 groupByYear = true
 cardView = false
 cardViewScreenWidth = false
@@ -68,9 +74,12 @@ excludedKinds = [ ]
 
 [taxonomy]
 showTermCount = true
+showHero = true
+heroStyle = "background"
 
-[params]
-displayLangSwitcher = false
+[term]
+showHero = true
+heroStyle = "background"
 
 [comments]
     provider = "disqus"
@@ -79,3 +88,5 @@ displayLangSwitcher = false
 [author]
     name = "limou"
     image = "img/avatar.jpg"
+    headline = "折腾，只为爱好"
+    bio = "无法安逸，就让不安多点意义"
